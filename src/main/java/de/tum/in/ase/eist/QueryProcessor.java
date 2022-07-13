@@ -14,9 +14,24 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist.";
         } else if (query.contains("name")) {
            return "HanYin";
-        } else {
+
+        } else if (query.contains("plus")) {
+//            Here we get a list of words
+            String[] words = query.split(" ");
+            int sum = 0;
+            for (String word: words) {
+                try {
+                    int number = Integer.parseInt(word);
+                    sum += number;
+                } catch (Exception e) {
+                    continue;
+                }
+            }
+            return String.valueOf(sum);
+        } else if (query.contains("largest")) {
+
+        }
 //            add a new comment here, please don't remove
             return "";
-        }
     }
 }
