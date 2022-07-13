@@ -14,7 +14,8 @@ public class QueryProcessor {
         } else if (query.contains("name")) {
            return "HanYin";
         } else {
-            return "I don't understand.";
+//            add a new comment here, please don't remove
+            return "I don't understand";
         }
     }
 }
